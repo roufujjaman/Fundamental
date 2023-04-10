@@ -1,3 +1,5 @@
+//          Q. Digits
+//          https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/Q
 #include <stdio.h>
 int main() {
     int count;
