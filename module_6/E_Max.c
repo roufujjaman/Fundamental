@@ -1,4 +1,4 @@
-//      E. Max
+//          E. Max
 
 #include <stdio.h>
 int main() {

@@ -1,5 +1,5 @@
-//      B. Even Numbers
-//      https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/B
+//          B. Even Numbers
+//          https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/B
 #include <stdio.h>
 
 int main() {

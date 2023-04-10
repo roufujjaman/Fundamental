@@ -1,5 +1,5 @@
-//      F. Multiplication table
-//      https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/F
+//          F. Multiplication table
+//          https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/F
 #include <stdio.h>
 int main() {
     int i, count;

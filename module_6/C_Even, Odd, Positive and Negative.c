@@ -1,5 +1,5 @@
-//      C. Even, Odd, Positive and Negative
-//      https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/C
+//          C. Even, Odd, Positive and Negative
+//          https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/C
 #include <stdio.h>
 int main() {
     int i, n, val, countEven = 0, countOdd = 0, CountPositive = 0, countNagative = 0;
