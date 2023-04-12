@@ -1,5 +1,5 @@
-//          Katryoshka
-
+//              G. Katryoshka
+//              https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/G
 #include<stdio.h>
 
 int main()
@@ -42,5 +42,3 @@ int main()
     printf("%lld", countSouvenier);
     return 0;
 }
-
-// 458 81 280
