@@ -1,21 +1,25 @@
+//          Katryoshka
+
 #include<stdio.h>
 
 int main()
 {
-    int input;
-    scanf("%d", &input);
-    if ((input % 10) % (input / 10) == 0 && input >= 10 && input <= 99)
-    {
-        printf("YES");
-    }
-    else if ((input / 10) % (input % 10) == 0 && input >= 10 && input <= 99)
-    {
-        printf("YES");
-    }
-    else
-    {
-        printf("NO");
-    }
+    int eye, mouth, body, count=0;
+    scanf("%d %d %d", &eye, &mouth, &body);
 
+    do
+    {
+        /* code */
+    } while (eye);
+    
+    if (eye > 0 && mouth > 0 && body > 0)
+    {
+        eye--, mouth--, body--;
+        count++;
+    }
+    
+
+
+    printf("%d", count);
     return 0;
 }
