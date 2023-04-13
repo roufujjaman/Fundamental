@@ -1,46 +1,23 @@
-//          Katryoshka
-
-#include<stdio.h>
-
+#include <stdio.h>
+#include<limits.h>
 int main()
 {
-    long long int eyeN, mouthN, bodyN, count;
-    long long int countSouvenier=0;
-    scanf("%lld %lld %lld", &eyeN, &mouthN, &bodyN);
-        
-    if (eyeN <= mouthN && eyeN <= bodyN)
+    int count, position;
+    int min = INT_MAX;
+    scanf("%d", &count);
+    int arr[count];
+    for (int i = 0; i < count; i++)
     {
-        mouthN -= eyeN;
-        bodyN -= eyeN;
-        countSouvenier += eyeN;
+        scanf("%d", &arr[i]);
     }
-    else if (mouthN <= eyeN && mouthN <= bodyN)
+    for (int i = 0 - 1 ; i < count; i++)
     {
-        eyeN -= mouthN;
-        bodyN -= mouthN;
-        countSouvenier += mouthN;
-        
-        if (eyeN / 2 <= bodyN)
+        if (arr[i] < min)
         {
-            countSouvenier += eyeN / 2;
-            eyeN -= eyeN / 2;
-            bodyN -= bodyN;
+            min = arr[i];
+            position = i+1;
         }
-        else
-        {
-            countSouvenier += bodyN;
-            bodyN -= bodyN;
-            eyeN -= bodyN * 2;
-        }   
     }
-    else if (bodyN <= eyeN && bodyN <= eyeN)
-    {
-        mouthN -= bodyN;
-        eyeN -= bodyN;
-        countSouvenier += bodyN;
-    }
-    printf("%lld", countSouvenier);
+    printf("%d %d", min, position);
     return 0;
 }
-
-// 458 81 280
