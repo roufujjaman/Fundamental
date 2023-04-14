@@ -1,23 +1,25 @@
 #include <stdio.h>
-#include<limits.h>
-int main()
-{
-    int count, position;
-    int min = INT_MAX;
-    scanf("%d", &count);
-    int arr[count];
-    for (int i = 0; i < count; i++)
+int main() {
+
+    int input;
+    scanf("%d", &input);
+    if (input > 1)
     {
-        scanf("%d", &arr[i]);
-    }
-    for (int i = 0 - 1 ; i < count; i++)
-    {
-        if (arr[i] < min)
+        for (int i = 1; i <= input; i++)
         {
-            min = arr[i];
-            position = i+1;
+            printf("%d ", i);
+        }  
+    }
+    else if (input < 1)
+    {
+        for (int i = input; i <= 1; i++)
+        {
+            printf("%d ", i);
         }
     }
-    printf("%d %d", min, position);
+    else
+    {
+        printf("%d", 1);
+    }
     return 0;
 }
