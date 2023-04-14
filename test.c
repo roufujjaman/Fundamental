@@ -1,25 +1,18 @@
 #include <stdio.h>
 int main() {
-
-    int input;
-    scanf("%d", &input);
-    if (input > 1)
+    int count;
+    scanf("%d", &count);
+    int arr[count];
+    for (int i = 0; i < count; i++)
     {
-        for (int i = 1; i <= input; i++)
-        {
-            printf("%d ", i);
-        }  
+        scanf("%d", &arr[i]);
     }
-    else if (input < 1)
+    for (int i = count - 1; i >= 0; i--)
     {
-        for (int i = input; i <= 1; i++)
+        if (i % 2 == 0)
         {
-            printf("%d ", i);
+            printf("%d ", arr[i]);
         }
-    }
-    else
-    {
-        printf("%d", 1);
     }
     return 0;
 }
