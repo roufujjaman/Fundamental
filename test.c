@@ -1,18 +1,20 @@
 #include <stdio.h>
 int main() {
-    int count;
-    scanf("%d", &count);
-    int arr[count];
-    for (int i = 0; i < count; i++)
+    int a, b;
+    scanf("%d %d", &a, &b);
+    if (a % 2 == 0 && b % 2 == 1 && b == a + 1)
     {
-        scanf("%d", &arr[i]);
+        printf("YES");
     }
-    for (int i = count - 1; i >= 0; i--)
+    else if (a == b)
     {
-        if (i % 2 == 0)
-        {
-            printf("%d ", arr[i]);
-        }
+        printf("YES");
     }
+    
+    else
+    {
+        printf("NO");
+    }
+    
     return 0;
 }
