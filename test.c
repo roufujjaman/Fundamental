@@ -1,12 +1,29 @@
 #include <stdio.h>
-int main() {
-    char name[18];
-    while (!"\0")   
+char[] getline(char cin[], char symbol) {
+    int count = 0;
+    while (arr[count] != '\0')
     {
-        scanf("%c", name);
+        count++;
+        if (arr[count] == symbol)
+        {
+            break;
+        }
+    }
+    char arr[count+1];
+    for (int i = 0; i < count; i++)
+    {
+        arr[i] = cin[i];
     }
     
-    printf("%s", name);
+    return arr;
+}
+
+int main() {
+    char lineOne[1000];
+    char lineTwo[1000];
+    scanf("%s", &lineOne);
+    char newLineOne[1000] = getline(lineOne, '\\');
+    printf("%s", newLineOne);
 
     return 0;
 }
