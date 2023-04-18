@@ -1,29 +1,22 @@
 #include <stdio.h>
-char[] getline(char cin[], char symbol) {
-    int count = 0;
-    while (arr[count] != '\0')
+int main() {
+    char peragraph[20] = "Roufujjaman Rahat";
+    int sz = sizeof(peragraph);
+    int count=0;
+    while (peragraph[count] != '\0')
     {
         count++;
-        if (arr[count] == symbol)
+        if (peragraph[count] == 'R' || peragraph[count] == 'j')
         {
-            break;
+            peragraph[count] = 0;
         }
+        
     }
-    char arr[count+1];
-    for (int i = 0; i < count; i++)
-    {
-        arr[i] = cin[i];
-    }
+
+    printf("Char Size: %d\n", count);
     
-    return arr;
-}
+    printf("Array Size: %d\n", sz);
 
-int main() {
-    char lineOne[1000];
-    char lineTwo[1000];
-    scanf("%s", &lineOne);
-    char newLineOne[1000] = getline(lineOne, '\\');
-    printf("%s", newLineOne);
-
+    printf("%s", peragraph);
     return 0;
 }
