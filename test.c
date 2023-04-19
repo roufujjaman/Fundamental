@@ -1,10 +1,24 @@
 #include <stdio.h>
+#include <limits.h>
 int main() {
-    char textInput[1000001];
-    fgets(textInput, 1000001, stdin);
-    for (int i = 0; textInput[i] != '\\'; i++)
+    int max = INT_MIN, min;
+    int posMax, posMin;
+    int count, arr[100];
+    scanf("%d", &count);
+    for (int i = 0; i < count; i++)
     {
-        printf("%c", textInput[i]);
+        scanf("%d", &arr[i]);     
     }
+    for (int i = 0; i < count; i++)
+    {
+        if (arr[i] > max)
+        {
+            max = arr[i];
+        }
+        
+    }
+
+    printf("%d", max);
+    
     return 0;
 }
