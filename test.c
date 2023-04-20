@@ -1,24 +1,29 @@
 #include <stdio.h>
 #include <limits.h>
 int main() {
-    int max = INT_MIN, min;
-    int posMax, posMin;
-    int count, arr[100];
+    int count;
     scanf("%d", &count);
+    int arr[count + 1];
     for (int i = 0; i < count; i++)
     {
-        scanf("%d", &arr[i]);     
+        scanf("%d", &arr[i]);
     }
+    ijjJJJJt 
     for (int i = 0; i < count; i++)
     {
-        if (arr[i] > max)
-        {
-            max = arr[i];
-        }
-        
+        printf("[%d]", arr[i]);
     }
-
-    printf("%d", max);
-    
+    printf("\n");
+    int position, value;
+    scanf("%d %d", &position, &value);
+    int i;
+    for (i = count; i > position; i--)
+    {
+        arr[i] = arr[i - 1];
+    } arr[i] = 0;
+    for (int i = 0; i < count + 1; i++)
+    {
+        printf("[%d]", arr[i]);
+    }
     return 0;
 }

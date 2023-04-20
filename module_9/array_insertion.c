@@ -1,26 +1,26 @@
 #include <stdio.h>
+#include <limits.h>
 int main() {
     int count;
     scanf("%d", &count);
     int arr[count + 1];
-    if (count == 0)
-    {
-        return 0;
-    }
     for (int i = 0; i < count; i++)
     {
         scanf("%d", &arr[i]);
     }
-    int pos, val;
-    scanf("%d %d", &pos, &val);
-    // count = 5, but for array its 6th position 
-    for (int i = count; i >= pos + 1; i--)
+    for (int i = 0; i < count; i++)
     {
-        arr[i] = arr[i -1];
+        printf("[%d]", arr[i]);
     }
-    arr[pos] = val;
-
-    for (int i = 0; i <= count; i++)
+    printf("\n");
+    int position, value;
+    scanf("%d %d", &position, &value);
+    for (int i = count; i >= position; i--)
+    {
+        arr[i] = arr[i - 1];
+    }
+    arr[position] = value;
+    for (int i = 0; i < count + 1; i++)
     {
         printf("[%d]", arr[i]);
     }
