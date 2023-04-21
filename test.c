@@ -1,6 +1,11 @@
 #include <stdio.h>
+#include <string.h>
 int main() {
-    char arr[18];
-    scanf("%s", arr);
-    printf("%s", arr);
+    int count = 10;
+    for (int i = 10; i >= 0; i--)
+    {
+        printf("%d\n", i);
+    }
+    
+    return 0;
 }
