@@ -7,22 +7,14 @@ int main() {
     {
         return 0;
     }
-    int arr[count + 1];
+    int arr[count];
     for (int i = 0; i < count; i++)
     {
         scanf("%d", &arr[i]);
     }
-    int position, value;
-    scanf("%d %d", &position, &value);
-    for (int i = count; i > position; i--)
-    {
-        arr[i] = arr[i - 1];
-    }
-    arr[position] = value;
-    for (int i = 0; i < count + 1; i++)
+    for (int i = count - 1; i >= 0; i--)
     {
         printf("%d ", arr[i]);
     }
-    
     return 0;
 }
