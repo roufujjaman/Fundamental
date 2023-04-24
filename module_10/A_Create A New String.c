@@ -5,7 +5,6 @@ int mystrlen(char arr[]) {
     {
         count++;
     }
-    
     return count;
 }
 int main() {
