@@ -4,16 +4,20 @@
 #include <stdlib.h>
 
 int main() {
-    char arr[1001];
-    scanf("%s", &arr);
-    int countAlphabet[26] = {0};
+    char arr[100];
+    scanf("%s", arr);
+    int charCount[26] = {0};
     for (int i = 0; arr[i] != '\0'; i++)
     {
-        countAlphabet[arr[i] - 'a']++;
+        charCount[arr[i] - 'a']++;
     }
     for (int i = 0; i < 26; i++)
     {
-        printf("%c - %d\n", i + 'a', countAlphabet[i]);
+        if (charCount[i] != 0)      
+        {
+            printf("%c - %d\n", i + 'a', charCount[i]);
+        }
+        
     }
-    
+    return 0;
 }
