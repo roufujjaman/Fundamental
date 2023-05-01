@@ -1,15 +1,15 @@
 #include <stdio.h>
 int main() {
-    int n;
-    int k = 1;
-    scanf("%d", &n);
-    for (int i = 0; i < n; i++)
+    int count;
+    scanf("%d", &count);
+    int n = count;
+    for (int i = 0; i < count; i++)
     {
-        for (int j = 1; j <= k; j++)
+        for (size_t i = 0; i < n; i++)
         {
-            printf("*");
+            printf("#");
         }
-        k++;
+        n--;
         printf("\n");
     }
     return 0;
