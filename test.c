@@ -1,15 +1,20 @@
 #include <stdio.h>
 int main() {
-    int count;
+    int count, space, c = 1;
     scanf("%d", &count);
-    int n = count;
+    space = count - 1;
     for (int i = 0; i < count; i++)
     {
-        for (size_t i = 0; i < n; i++)
+        for (int j = 0; j < space; j++)
         {
-            printf("#");
+            printf(" ");
         }
-        n--;
+        for (int j = 0; j < c; j++)
+        {
+            printf("*");
+        }
+        space--;
+        c += 2;
         printf("\n");
     }
     return 0;
