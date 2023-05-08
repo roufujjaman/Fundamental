@@ -1,50 +1,27 @@
 #include <stdio.h>
-// Takes (original array, reference of the second array, array count)
-// sort in ascending order
-void arraySort(int arrOne[], int * arrTwo, int count)
+int count_before_zero(int * arr, int count)
 {
-    // array copy
+    int intCount = 0;
     for (int i = 0; i < count; i++)
     {
-        arrTwo[i] = arrOne[i];
-    }
-    // selection sort;
-    for (int i = 0; i < count - 1; i++)
-    {
-        for (int j = i + 1; j < count; j++)
+        if (*(arr + i) == 0)
         {
-            if (arrTwo[i] > arrTwo[j])
-            {
-                int temp = arrTwo[i];
-                arrTwo[i] = arrTwo[j];
-                arrTwo[j] = temp;
-            }
+            break;
         }
+        intCount++;
     }
+    return intCount;
 }
 int main()
 {
-    int count = 3;
+    int count;
+    scanf("%d", &count);
     int arr[count];
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < count; i++)
     {
         scanf("%d", &arr[i]);
     }
-    int arrSorted[count];
-
-    //arrSort() function
-    arraySort(arr, arrSorted, count);
-
-
-    //Printing...
-    for (int i = 0; i < count; i++)
-    {
-        printf("%d\n", arrSorted[i]);
-    }
-    printf("\n");
-    for (int i = 0; i < count; i++)
-    {
-        printf("%d\n", arr[i]);
-    }
+    int result = count_before_zero(arr, count);
+    printf("%d", result);
     return 0;
 }

@@ -1,5 +1,5 @@
 #include <stdio.h>
-int count_before_zero(int arr[], int count)
+int count_before_zero(int * arr, int count)
 {
     int intCount = 0;
     for (int i = 0; i < count; i++)
@@ -8,7 +8,7 @@ int count_before_zero(int arr[], int count)
         {
             break;
         }
-        
+        intCount++;
     }
     return intCount;
 }
