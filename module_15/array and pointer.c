@@ -1,26 +1,30 @@
 #include <stdio.h>
-
 int main()
 {
     int arr[5] = {100, 200, 300, 400, 500};
-    printf("arr[0] address\t- %p\n", &arr[0]);
-    printf("arr[0] address\t- %p\n", arr);
+    printf("Printing Value of arr[2]\n");
+    printf("%d\n", arr[2]);
+    printf("%d\n", 2[arr]);
+    printf("%d\n", *(arr + 2));
+    printf("%d\n", 2[arr]);
 
+    printf("\n");
 
-    printf("arr[0] value\t- %d\n", arr[0]);
-    printf("arr[0] value\t- %d\n", *arr);
-
-    printf("arr[1] value\t- %d\n", arr[1]);
-    printf("arr[1] value\t- %d\n", *(arr+1)); //arr[1] -> *(arr+1)
-    printf("arr[1] value\t- %d\n", 1[arr]); //arr[1] -> *(arr+1)
+    printf("Printing Address of arr[2]\n");
+    printf("%p\n", &arr[2]);
+    printf("%p\n", &2[arr]);
+    printf("%p\n", arr + 2);
 
     return 0;
 }
 
-// arr[0] address  - 0061FF0C
-// arr[0] address  - 0061FF0C
-// arr[0] value    - 100
-// arr[0] value    - 100
-// arr[1] value    - 200
-// arr[1] value    - 200
-// arr[1] value    - 200
+// Printing Value of arr[2]
+// 300
+// 300
+// 300
+// 300
+
+// Printing Address of arr[2]
+// 0061FF14
+// 0061FF14
+// 0061FF14
