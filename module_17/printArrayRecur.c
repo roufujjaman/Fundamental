@@ -1,7 +1,7 @@
 #include <stdio.h>
 void printArrayRecur(int * arr, int index, int count)
 {
-    if (index == count) return;
+    if (index == count) return; // Base case
     printf("%d ", arr[index]);
     return printArrayRecur(arr, index + 1, count);
 }
