@@ -9,19 +9,23 @@ int main()
     {
         scanf("%d", &arr[i]);
     }
-
-    int elementCount = 0;
     for (int i = 0; i < numValues; i++)
     {
-        for (int j = 0; j < numValues; j++)
+        if(arr[i] == 0)
         {
-            if(arr[i] + 1 == arr[j])
+            int j = 0, k = i - 1;
+            while (j < k)
             {
-                elementCount++;
-                break;
+                int temp = arr[j];
+                arr[j] = arr[k];
+                arr[k] = temp;
+                j++, k--;
             }
         }
     }
-    printf("%d", elementCount);
+    for ( int i = 0; i < numValues; i++)
+    {
+        printf("%d ", arr[i]);
+    }
     return 0;
 }

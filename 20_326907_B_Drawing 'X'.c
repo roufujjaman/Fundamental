@@ -1,15 +1,23 @@
 #include <stdio.h>
 int main()
 {
-    int count;
-    scanf("%d", &count);
-    for (int i = 0; i < count; i++)
+    int numValue;
+    scanf("%d", &numValue);
+    for (int i = 0; i < numValue; i++)
     {
-        for (int j = 0; j < count; j++)
+        for (int j = 0; j < numValue; j++)
         {
-            if (i == count / 2 && j == count / 2)
+            if (i == numValue / 2 && j == numValue / 2)
             {
                 printf("X");
+            }
+            else if (i == j)
+            {
+                printf("\\");
+            }
+            else if (i + j == numValue - 1)
+            {
+                printf("/");
             }
             else
             {
@@ -20,3 +28,15 @@ int main()
     }
     return 0;
 }
+// 11 [odd number]
+// \*********/
+// *\*******/*
+// **\*****/**
+// ***\***/***
+// ****\*/****
+// *****X*****
+// ****/*\****
+// ***/***\***
+// **/*****\**
+// */*******\*
+// /*********\
