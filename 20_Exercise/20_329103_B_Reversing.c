@@ -14,7 +14,7 @@ int main()
         if(arr[i] == 0)
         {
             int j = 0, k = i - 1;
-            while (j < k)
+            while (j < k)   ///j <= k
             {
                 int temp = arr[j];
                 arr[j] = arr[k];

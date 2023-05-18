@@ -7,7 +7,7 @@ int main()
     for (int i = 0; i < num_value; i++)
     {
         char current_char;
-        scanf(" %c", &current_char);
+        scanf("%c", &current_char);
         arr_alphabet[current_char - 'a']++;
     }
     for (int i = 0; i < 26; i++)
