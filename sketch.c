@@ -1,22 +1,24 @@
 #include <stdio.h>
 int main()
 {
-    int num_value;
-    scanf("%d\n", &num_value);
-    long long int arr_alphabet[26] = {0};
-    for (int i = 0; i < num_value; i++)
+    int count;
+    scanf("%d\n", &count);
+    char arr[101];
+    for (int i = 0; i < count; i++)
     {
-        char current_char;
-        scanf("%c", &current_char);
-        arr_alphabet[current_char - 'a']++;
-    }
-    for (int i = 0; i < 26; i++)
-    {
-        while (arr_alphabet[i] != 0)
+        scanf("%s", arr);
+        int len = 0;
+        for (int j = 0; arr[j] != '\0'; j++)
         {
-            printf("%c", i + 'a');
-            arr_alphabet[i]--;
+            len++;
         }
+        if(len > 10) printf("%c%d%c\n", arr[0], len - 2, arr[len - 1]);
+        else printf("%s", arr);
     }
+    
     return 0;
 }
+
+// 10
+// 0 1 2 3 4 5 6 7 8 9
+// 0, 10-1
