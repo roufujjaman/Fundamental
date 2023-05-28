@@ -20,9 +20,9 @@ class Student
 };
 int main()
 {
-    Student student_one = new Student("Roufujjaman", 4010, 'A', 100, 13);
-    Student student_two = new Student("Umme", 3010, 'A', 96, 13);
-    Student student_three = new Student("Ruhul", 1010, 'A', 40, 13);
+    Student student_one("Roufujjaman", 4010, 'A', 93, 13);
+    Student student_two("Umme", 3010, 'A', 96, 13);
+    Student student_three("Ruhul", 1010, 'A', 40, 13);
 
     if (student_one.math_marks > student_two.math_marks && student_one.math_marks > student_three.math_marks)
     {

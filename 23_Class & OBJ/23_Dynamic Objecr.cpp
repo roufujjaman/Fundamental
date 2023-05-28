@@ -40,10 +40,10 @@ int main()
 
     //deleting dynamic object;
     delete monitor_three;
-    cout << monitor_three -> model << endl;
-    cout << monitor_three -> manufacturer << endl;
-    cout << monitor_three -> size << endl;
-    cout << endl;
+    // cout << monitor_three -> model << endl;
+    // cout << monitor_three -> manufacturer << endl;
+    // cout << monitor_three -> size << endl;
+    // cout << endl;
 
     return 0;
 }
