@@ -2,9 +2,8 @@
 using namespace std;
 int main()
 {
-    string str;
-    getline( cin, str );
-    stringstream str_stream( str );
-    print( str_stream );
+    string a = "Hello Bangladesh";
+    string s("Hello Bangladesh", 6);
+    cout << s;
     return 0;
 }
