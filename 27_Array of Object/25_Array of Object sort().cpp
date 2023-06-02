@@ -6,6 +6,11 @@ class Pen
         string name;
         int price;
 };
+bool cpm(Pen a, Pen b)
+{
+    if( a.price < b.price ) return true;
+    else return false;
+}
 int main()
 {
     int count;
@@ -17,19 +22,9 @@ int main()
         cin >> arr[i].price;
     }
     
-    //selection sort on price high>low
-    for( int i = 0; i < count - 1; i++ )
-    {
-        for( int j = i + 1; j < count; j++)
-        {
-            if( arr[i].price < arr[j].price )
-            {
-                Pen temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-            }
-        }
-    }
+    //built in sort() on price smaller < bigger 
+    sort(arr, arr+count, cpm);
+
     for( int i = 0; i < count; i++ )
     {
         cout << arr[i].name << ' ';

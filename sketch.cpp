@@ -1,39 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
-class Pen
+int equation(int x, int n)
 {
-    public:
-        string name;
-        int price;
-};
+    int accm = 0;
+    if( n == 2)
+    {
+        return accm;
+    }
+    else
+    {
+        equation(x, n - 1);
+        accm += x * n;
+        return accm;
+    }
+}
 int main()
 {
-    int count;
-    cin >> count;
-    Pen arr[count];
-    for( int i = 0; i < count; i++ )
-    {
-        cin >> arr[i].name;
-        cin >> arr[i].price;
-    }
-    
-    //selection sort on price high>low
-    for( int i = 0; i < count - 1; i++ )
-    {
-        for( int j = i + 1; j < count; j++)
-        {
-            if( arr[i].price < arr[j].price )
-            {
-                Pen temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-            }
-        }
-    }
-    for( int i = 0; i < count; i++ )
-    {
-        cout << arr[i].name << ' ';
-        cout << arr[i].price << endl;
-    }
+    int res = equation(5, 5);
+    cout << res;
     return 0;
 }
