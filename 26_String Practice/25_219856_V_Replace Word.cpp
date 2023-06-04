@@ -18,8 +18,8 @@ int main()
                     if ( found_egypt == false )
                     {
                         found_egypt = true;
-                        continue;
                     }
+                    continue;
                 }
                 else
                 {
@@ -39,4 +39,4 @@ int main()
         }
     }
     return 0;
-}
+} 

@@ -1,22 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
-int equation(int x, int n)
-{
-    int accm = 0;
-    if( n == 2)
+int main() {
+    int count;
+    cin >> count;
+    for( int i = 0; i < count; i++ )
     {
-        return accm;
+        string str_input, f;
+        cin >> str_input >> f;
+        while ( str_input.find(f) != -1 )
+        {
+            int index = str_input.find(f);
+            str_input.replace(index, f.length(), "$");
+        }
+        cout << str_input << endl;
     }
-    else
-    {
-        equation(x, n - 1);
-        accm += x * n;
-        return accm;
-    }
-}
-int main()
-{
-    int res = equation(5, 5);
-    cout << res;
     return 0;
 }
