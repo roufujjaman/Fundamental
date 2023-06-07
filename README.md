@@ -1,4 +1,4 @@
-### groundwork
+### fundamentals
 Welcome to my GitHub profile! This README.md document serves as a guide to the labelling system I've implemented to easily identify important coding concepts that require further study over time. With this system, a few file name is accompanied by a relevant label, allowing me to quickly spot and prioritize the codes I need to revisit.
 
 💤 **Dormant**:
