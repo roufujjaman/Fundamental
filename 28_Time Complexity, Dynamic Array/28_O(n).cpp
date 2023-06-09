@@ -10,7 +10,7 @@ int main()
         cin >> a[i];
     }
     int sum = 0;
-    for ( int i = 0; i < count; i++ )
+    for ( int i = 0; i < count; i *= 2 )
     {
         s += a[i];
     }
