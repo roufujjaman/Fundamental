@@ -1,37 +1,19 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
-    long long N, Q;
-    cin >> N >> Q;
-    vector<long long int> arr(N); // Prefix Sum
-    for ( int i = 0; i < N; i++ ) // O(N)
+    int count;
+    cin >> count;
+    for( int i = 0; i < count; i++ )
     {
-        if( i == 0 )
+        for( int j = 0; j < count; j++ )
         {
-            cin >> arr[i];
+            if ( i == count / 2 && j == count / 2) cout << 'X';
+            else if( i == j ) cout << '\\';
+            else if ( i + j == count - 1 ) cout << '/';
+            else cout << ' ';
         }
-        else
-        {
-            cin >> arr[i];
-            arr[i] = arr[i] + arr[ i - 1 ];
-        }
-    }
-    for ( int i = 0; i < Q; i++) //O(N)
-    {
-        long long L, R;
-        cin >> L >> R;
-        L--, R--;
-        long long sum;
-        if( L == 0 )
-        {
-            cout << arr[R] << endl;
-        }
-        else
-        {
-            sum = arr[R] - arr[ L - 1 ];
-            cout << sum << endl;
-        }
+        cout << endl;
     }
     return 0;
 }
