@@ -1,19 +1,16 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 int main()
 {
-    int count;
-    cin >> count;
-    for( int i = 0; i < count; i++ )
+    string input_str;
+    getline(cin, input_str);
+    stringstream strs;
+    strs << input_str;
+    string str;
+    while (strs >> str )
     {
-        for( int j = 0; j < count; j++ )
-        {
-            if ( i == count / 2 && j == count / 2) cout << 'X';
-            else if( i == j ) cout << '\\';
-            else if ( i + j == count - 1 ) cout << '/';
-            else cout << ' ';
-        }
-        cout << endl;
+        cout << str << '\n';
     }
-    return 0;
+    
+    cout << input_str;
 }
